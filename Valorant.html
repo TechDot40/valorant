@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant- tips and tricks</title>
+    <style>
+html {font-size: 150%;}
+h1 {
+  background-color: #ff1b1b;
+}
+p {
+  background-color: #ff0000;
+}
+p.maybe {outline-style: outset;}
+        #yes {
+            width: 650px;
+        }
+        #no {
+            width: 650px;
+            font-family: Algerian, Helvetica, sans-serif;
+        }
+    .header {
+        background-color: #9b0606c9;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+
+    }
+    .header h2{
+        font-size: 50px;
+        font-family: Algerian, Helvetica, sans-serif;
+    font-weight:bold;
+    }
+    </style>
+</head>
+<body style="background-color:#ff1818;"> 
+<header class="header maybe">
+    <h2><strong>Valorant</strong></h2>
+</header>
+
+<h1 id="no">Improve your gaming!</h1>
+<p id="yes"><strong>Have you ever thought of how good players like Tenz and Ethos become good. The key is <em>practice</em>. They play alot and they therefor get more and more experince wich then makes them better at the game. There are 23 ranks in Valorant, including unranked. The average rank is bronze/silver and this guide will help you to get over those ranks.</strong></p>
+<img src="valorant_test.jpg" alt="Sentinels vct Masters" width="550px" style="position:absolute; left: 50%;">
+<h3 id="no"><strong>Content</strong></h3>
+<dl>
+<li>Aiming</li>
+<li>Crosshairplacement</li>
+<li>Gamesence</li>
+<li>Teammates</li>
+<li>Callouts and mutes</li>
+<li>Setup, abilities and lineups</li>
+<li>Conclusion</li>
+</dl>
+
+<h3 id="no"><strong>Aiming</strong></h3>
+<p id="yes">Aiming is one of the most important things in Valorant. Valorant is a first person shooter game where the objektive is to kill enemy players and eighter defuse, defend og plant a bomb. The way you improve your aim is by practising. You can practise by watching youtube tutorials or by simply going into the shooting range and shoot headshots at the bots. </p>
+
+<h3 id="no"><strong>Crosshairplacement</strong></h3>
+<p id="yes">Crosshairplacement is one thing that filters out noob bronze-players to silver- and gold-players. Crosshairplacement is a way of playing were your crosshair is on the enemy's head at any point in the head. That means you only have to move your mouse to the left or right to hit their head. This makes both your aim easier, and you will start to win more fights against unexpected enimies.</p>
+
+<h3 id="no"><strong>Gamesense</strong></h3>
+<p id="yes">Gamesense is an important factor in Valorant. It is actually iportant in every game. You build gamesense as you play. The more you play, the better gamesense you get. Gamesense is a way of thinking, and knowing where the enemy is. It is when they for example rush on A site, and then get two kills. What they would do is rotate to B site, but you don't know for sure. Thats when the gamesense get's in the game. You know that they have three options: they can rotate to the other site. They can push A site, or they can fake rotate, and go A site. You would then just stay A site and wait for them, but actually what you would do, is sending one or two teammates to offagnelse in their rotation, and that would maybe give your team a pick or two.. </p>
+
+<h3 id="no"><strong>Teammates</strong></h3>
+<p id="yes">Many people complain that it's their teammates fault that they don't rankup. Well, here is a solution: baiting. Batining is a were you run behind or with a teammate, and when they get shot on, you shoot at the enemy who's shooting at your teammate. When you do that you're almost guaranteed a trade or the enemy dying. </p>
+
+<h3 id="no"><strong>Callouts and mutes</strong></h3>
+<p id="yes"></p>
+
+<h3 id="no"><strong>Setup, abilities and lineups</strong></h3>
+<p id="yes"></p>
+
+<h3 id="no"><strong>Conclusion</strong></h3>
+<p id="yes"></p>
+
+<P><strong>Example of some people doing everything said in this guide:</strong></P>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QltExcrs8g0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<P><strong>Other articles and a game:</strong></P>
+
+<canvas style="border: 1px solid black; background-color: white;" width="450" height="450" id="canvas"></canvas>
+
+<iframe src="index.html" style="height:200px;width:1300px;" title="YEA"></iframe>
+</body>
+<script>
+
+
+/** @type {HTMLCanvasElement} */
+
+const canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var x = 0
+var y = 0
+var xvel = 0
+var yvel = 0
+
+const width = 450;
+const height = 450;
+
+
+function doKeyDown(e) {
+    switch(e.keyCode) {
+        case 38:
+            if (y >= screenHeight - RectH) {
+                yvel = -7;
+            }
+            break;
+        case 37: 
+            xvel -= 1;
+            break;
+        case 39:  
+            xvel += 1;
+            break;
+    }
+}
+
+
+setInterval( () => {
+    x += xvel
+    y += yvel
+    yvel += 0.1
+    if (height-20 < y) {
+        y = height-20
+    }
+
+    window.addEventListener("keydown", doKeyDown);
+
+
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillRect(x, y, 20, 20);
+}, 10)
+
+
+</script>
+</html>
